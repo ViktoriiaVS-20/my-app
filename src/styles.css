@@ -1,3 +1,9 @@
+.Main a {
+  color: lightsalmon;
+  font-family: monospace;
+  text-decoration: overline;
+}
+
 .App {
   font-family: monospace;
 }
