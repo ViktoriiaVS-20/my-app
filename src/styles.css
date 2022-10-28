@@ -1,0 +1,57 @@
+.App {
+  font-family: monospace;
+}
+
+.App {
+  padding: 0px 20px 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+  margin-top: 20px;
+  max-width: 650px;
+}
+.App .title {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.Form {
+  margin-top: 20px;
+  max-width: 650px;
+}
+.Form .btn {
+  background-color: #198754;
+}
+.Form .btn:hover {
+  color: #dadde1;
+}
+.Weather .overview {
+  margin-bottom: 20px;
+}
+.Weather ul {
+  list-style-type: none;
+}
+.Weather .weather-desc {
+  text-transform: capitalize;
+}
+.Weather .weather-temperature strong {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+.Weather .img {
+  width: 100px;
+  height: auto;
+}
+.Weather .weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+  white-space: nowrap;
+  overflow: visible;
+}
+.Weather .units a {
+  text-decoration: none;
+  color: lightsalmon;
+  font-weight: bold;
+}
