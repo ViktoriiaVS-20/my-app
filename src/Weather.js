@@ -7,10 +7,13 @@ export default function Weather() {
   let [loaded, setLoaded] = useState(false);
   let [data, setData] = useState("");
   let [temperature, setTemperature] = useState(null);
+  let [message, setMessage] = useState("");
 
   function displayWeather(response) {
     console.log(response.data);
     setLoaded(true);
+    city = response.data.name;
+    setMessage(city);
     setTemperature(response.data.main.temp);
     setData({
       country: response.data.sys.country,
@@ -66,7 +69,7 @@ export default function Weather() {
         {form}
         <div className="overview">
           <h1>
-            {city} | {data.country}
+            {message} | {data.country}
           </h1>
           <ul>
             <li>Friday 16:00</li>
