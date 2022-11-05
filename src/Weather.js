@@ -4,7 +4,8 @@ import axios from "axios";
 
 export default function Weather() {
   let [city, setCity] = useState("");
-  let [data, setData] = useState({ loaded: false });
+  let [loaded, setLoaded] = useState(false);
+  let [data, setData] = useState("");
   let [temperature, setTemperature] = useState(null);
   let [message, setMessage] = useState("");
 
@@ -12,9 +13,9 @@ export default function Weather() {
     console.log(response.data);
     city = response.data.name;
     setMessage(city);
+    setLoaded(true);
     setTemperature(response.data.main.temp);
     setData({
-      loaded: true,
       country: response.data.sys.country,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -62,7 +63,7 @@ export default function Weather() {
     </div>
   );
 
-  if (setData.loaded) {
+  if (loaded) {
     return (
       <div className="Weather">
         {form}
