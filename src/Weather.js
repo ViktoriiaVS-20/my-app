@@ -10,17 +10,17 @@ export default function Weather() {
   let [message, setMessage] = useState("");
 
   function displayWeather(response) {
-    console.log(response);
-    city = response.city;
+    console.log(response.data);
+    city = response.data.city;
     setMessage(city);
     setLoaded(true);
-    setTemperature(response.data.main.temp);
+    setTemperature(response.data.temperature.current);
     setData({
-      country: response.data.sys.country,
+      country: response.data.country,
       wind: response.data.wind.speed,
-      humidity: response.data.main.humidity,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      description: response.data.weather[0].description,
+      humidity: response.data.temperature.humidity,
+      icon: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
+      description: response.data.condition.description,
     });
   }
 
