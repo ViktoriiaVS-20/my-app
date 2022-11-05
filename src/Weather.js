@@ -10,8 +10,8 @@ export default function Weather() {
   let [message, setMessage] = useState("");
 
   function displayWeather(response) {
-    console.log(response.data);
-    city = response.data.name;
+    console.log(response);
+    city = response.city;
     setMessage(city);
     setLoaded(true);
     setTemperature(response.data.main.temp);
@@ -31,8 +31,8 @@ export default function Weather() {
   function clickSubmit(event) {
     event.preventDefault();
     let units = "metric";
-    let apiKey = `eb4b9c9f52e39ba16b6dff58dd6bccb0`;
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    let apiKey = `be08550c2aadfta34dbaac43c863o491`;
+    let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
     axios.get(url).then(displayWeather);
   }
