@@ -1,15 +1,8 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemoerature";
 
 export default function Search(props) {
-  function showFahrenheiht(event) {
-    event.preventDefault();
-    let fahrenheihtTemperature = Math.round(
-      (props.data.temperature * 9) / 5 + 32
-    );
-    return fahrenheihtTemperature;
-  }
-
   if (props.data.country === "United States of America") {
     props.data.country = "USA";
   }
@@ -37,18 +30,12 @@ export default function Search(props) {
                 className="img"
               />
             </div>
-            <div className="col-md-6 row-6 mt-3 mt-md-0">
-              <strong>{Math.round(props.data.temperature)}</strong>
-              <span className="units">
-                <a href="/">°C</a> |
-                <a href="/" onClick={showFahrenheiht}>
-                  °F
-                </a>
-              </span>
+            <div className="col-md-6 row-6 mt-3 md-0">
+              <WeatherTemperature celsius={props.data.temperature} />
             </div>
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-6 mt-3">
           <ul>
             <li>Humidity: {props.data.humidity}%</li>
             <li>Wind: {props.data.wind} km/h</li>

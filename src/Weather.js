@@ -8,7 +8,6 @@ export default function Weather() {
   let [data, setData] = useState({ loaded: false });
 
   function displayWeather(response) {
-    console.log(response.data);
     setData({
       loaded: true,
       date: new Date(response.data.time * 1000),
@@ -39,7 +38,7 @@ export default function Weather() {
     <div className="Form">
       <form className="mb-3" onSubmit={clickSubmit}>
         <div className="row">
-          <div className="col-9">
+          <div className="col-8">
             <input
               type="search"
               placeholder="Type a city..."
@@ -58,7 +57,7 @@ export default function Weather() {
 
   if (data.loaded) {
     return (
-      <div className="Weather">
+      <div className="Info">
         {form}
         <Search data={data} />
       </div>

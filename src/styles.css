@@ -1,4 +1,4 @@
-.Main a {
+.Main .linkGitHub {
   color: lightsalmon;
   font-family: monospace;
   text-decoration: overline;
@@ -20,6 +20,9 @@
   margin-top: 20px;
   font-weight: bold;
 }
+.Info {
+  margin-left: 40px;
+}
 .Form {
   margin-top: 20px;
   max-width: 650px;
@@ -30,11 +33,10 @@
 .Form .btn:hover {
   color: #dadde1;
 }
-.Weather .overview {
-  margin-bottom: 20px;
-}
+
 .Weather ul {
   list-style-type: none;
+  margin-bottom: 0;
 }
 .Weather .weather-desc {
   text-transform: capitalize;
@@ -48,16 +50,52 @@
 .Weather .img {
   width: 100px;
   height: auto;
+  animation: myAnim 5s ease 0s infinite alternate forwards;
 }
-.Weather .weather-temperature .units {
+@keyframes myAnim {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.Weather .weather-temperature .units,
+.Weather .weather-temperature .unit {
   position: relative;
   font-size: 16px;
   top: -34px;
   white-space: nowrap;
   overflow: visible;
 }
-.Weather .units a {
+.Weather .units a,
+.Weather .unit a {
   text-decoration: none;
-  color: lightsalmon;
+  /* color: lightsalmon; */
+  color: rgb(33, 33, 33);
   font-weight: bold;
+}
+.Weather .units .celsius {
+  color: lightsalmon;
+}
+.Weather .unit .fahrenheiht {
+  color: lightsalmon;
 }
