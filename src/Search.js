@@ -1,6 +1,5 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
-import WeatherTemperature from "./WeatherTemoerature";
 
 export default function Search(props) {
   if (props.data.country === "United States of America") {
@@ -32,7 +31,10 @@ export default function Search(props) {
                 />
               </div>
               <div className="col-md-6 row-6 mt-3 md-0">
-                <WeatherTemperature celsius={props.data.temperature} />
+                <div className="weather-temperature">
+                  <strong>{Math.round(props.data.temperature)}</strong>
+                  <span className="units">°C</span>
+                </div>
               </div>
             </div>
           </div>
