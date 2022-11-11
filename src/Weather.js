@@ -61,6 +61,7 @@ export default function Weather() {
     return (
       <div>
         {form}
+        <hr />
         <Search data={data} />
         <hr />
         <WeatherForecast data={data} city={data.city} />
