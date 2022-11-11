@@ -27,7 +27,7 @@ export default function WeatherForecastDay(props) {
   return (
     <div className="WeatherForecastDay">
       <div className="WeatherForecast-day">{day()}</div>
-      <img src={icon} alt={alt} className="WeatherForecastTemperature-img" />
+      <img src={icon} alt={alt} className="WeatherForecast-img" />
       <div className="WeatherForecastTemperature">
         <span className="WeatherForecastTemperature-max">
           {maxTemperature()}°

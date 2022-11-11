@@ -8,8 +8,8 @@ export default function Search(props) {
   }
 
   return (
-    <div className="Weather">
-      <div className="overview">
+    <div>
+      <div className="Weather-overview">
         <h1>
           {props.data.city} | {props.data.country}
         </h1>
@@ -20,26 +20,28 @@ export default function Search(props) {
           <li className="weather-desc">{props.data.description}</li>
         </ul>
       </div>
-      <div className="row">
-        <div className="col-6">
-          <div className=" row weather-temperature">
-            <div className="col-md-6 row-6">
-              <img
-                src={props.data.icon}
-                alt={props.data.description}
-                className="img"
-              />
-            </div>
-            <div className="col-md-6 row-6 mt-3 md-0">
-              <WeatherTemperature celsius={props.data.temperature} />
+      <div className="Weather-data">
+        <div className="row">
+          <div className="col-6">
+            <div className=" row weather-temperature">
+              <div className="col-md-6 row-6">
+                <img
+                  src={props.data.icon}
+                  alt={props.data.description}
+                  className="img"
+                />
+              </div>
+              <div className="col-md-6 row-6 mt-3 md-0">
+                <WeatherTemperature celsius={props.data.temperature} />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col-6 mt-3">
-          <ul>
-            <li>Humidity: {props.data.humidity}%</li>
-            <li>Wind: {props.data.wind} km/h</li>
-          </ul>
+          <div className="col-6 mt-3">
+            <ul>
+              <li>Humidity: {props.data.humidity}%</li>
+              <li>Wind: {props.data.wind} km/h</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

@@ -20,12 +20,10 @@
   margin-top: 20px;
   font-weight: bold;
 }
-.Info {
-  margin-left: 40px;
-}
 .Form {
   margin-top: 20px;
   max-width: 650px;
+  margin-left: 40px;
 }
 .Form .btn {
   background-color: #198754;
@@ -33,21 +31,27 @@
 .Form .btn:hover {
   color: #dadde1;
 }
-
-.Weather ul {
+.Weather-overview {
+  margin-left: 20px;
+}
+.Weather-data {
+  margin-left: 40px;
+}
+.Weather-overview ul,
+.Weather-data ul {
   list-style-type: none;
   margin-bottom: 0;
 }
-.Weather .weather-desc {
+.Weather-overview .weather-desc {
   text-transform: capitalize;
 }
-.Weather .weather-temperature strong {
+.Weather-data .weather-temperature strong {
   color: rgb(33, 33, 33);
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
 }
-.Weather .img {
+.Weather-data .img {
   width: 100px;
   height: auto;
   animation: myAnim 5s ease 0s infinite alternate forwards;
@@ -78,24 +82,23 @@
   }
 }
 
-.Weather .weather-temperature .units,
-.Weather .weather-temperature .unit {
+.weather-temperature .units,
+.weather-temperature .unit {
   position: relative;
   font-size: 16px;
   top: -34px;
   white-space: nowrap;
   overflow: visible;
 }
-.Weather .units a,
-.Weather .unit a {
+.units a,
+.unit a {
   text-decoration: none;
-  /* color: lightsalmon; */
   color: rgb(33, 33, 33);
   font-weight: bold;
 }
-.Weather .units .celsius {
+.units .celsius {
   color: lightsalmon;
 }
-.Weather .unit .fahrenheiht {
+.unit .fahrenheiht {
   color: lightsalmon;
 }

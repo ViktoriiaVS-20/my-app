@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Search from "./Search";
+import WeatherForecast from "./WeatherForecast";
 import "./styles.css";
 import axios from "axios";
+import "./WeatherForecast.css";
 
 export default function Weather() {
   let [city, setCity] = useState("");
@@ -57,9 +59,11 @@ export default function Weather() {
 
   if (data.loaded) {
     return (
-      <div className="Info">
+      <div>
         {form}
         <Search data={data} />
+        <hr />
+        <WeatherForecast data={data} city={data.city} />
       </div>
     );
   } else {

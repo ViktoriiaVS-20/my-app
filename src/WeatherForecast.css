@@ -8,3 +8,6 @@
 .WeatherForecastDay {
   padding-left: 0px;
 }
+.WeatherForecast-img {
+  width: 80px;
+}
