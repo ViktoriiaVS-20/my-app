@@ -63,7 +63,7 @@ export default function Weather() {
         {form}
         <hr />
         <Search data={data} />
-        <hr />
+        <hr className="mt-0" />
         <WeatherForecast data={data} city={data.city} />
       </div>
     );
