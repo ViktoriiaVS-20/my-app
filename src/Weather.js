@@ -29,7 +29,7 @@ export default function Weather() {
 
   function clickSubmit(event) {
     event.preventDefault();
-    let units = "metric";
+    let units = "imperial";
     let apiKey = `be08550c2aadfta34dbaac43c863o491`;
     let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
