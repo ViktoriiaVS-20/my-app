@@ -11,9 +11,16 @@
 .WeatherForecast-img {
   width: 80px;
 }
+.btn{
+  width: 100%
+}
+
 
 @media (max-width: 900px) {
   ol, ul{
     padding-left: 0;
   }
+  .btn{
+  width: auto;
+}
 }
