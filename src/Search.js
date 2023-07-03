@@ -33,7 +33,7 @@ export default function Search(props) {
               <div className="col-md-6 row-6 mt-3 md-0">
                 <div className="weather-temperature">
                   <strong>{Math.round(props.data.temperature)}</strong>
-                  <span className="units">°C</span>
+                  <span className="units">°F</span>
                 </div>
               </div>
             </div>
