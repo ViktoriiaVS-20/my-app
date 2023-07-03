@@ -41,7 +41,7 @@ export default function Search(props) {
           <div className="col-6 mt-3">
             <ul>
               <li>Humidity: {props.data.humidity}%</li>
-              <li>Wind: {props.data.wind} km/h</li>
+              <li>Wind: {props.data.wind} MPH</li>
             </ul>
           </div>
         </div>
