@@ -14,7 +14,9 @@
 .btn{
   width: 100%
 }
-
+input:focus{
+  color: grey;
+}
 
 @media (max-width: 900px) {
   ol, ul{
