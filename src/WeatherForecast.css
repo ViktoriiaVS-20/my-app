@@ -23,4 +23,7 @@
   .btn{
   width: auto;
 }
+  .col-8, .col-3{
+    padding-left: 0;
+  }
 }
